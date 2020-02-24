@@ -78,6 +78,8 @@
       app
       color="indigo"
       >
+      <v-spacer />
+      <span style="color: white">&copy; 2020 Shuto Matsuyuki. All Rights Reserved.</span>
       </v-footer>
     </v-app>
 </template>
