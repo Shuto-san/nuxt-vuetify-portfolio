@@ -63,13 +63,16 @@
     data: () => ({
       profiles: [
         { content: 'SHOOT（しゅーと）'},
+        { content: '1993年かわさき生まれ'},
         { content: 'Webエンジニア×ブロガー'},
-        { content: 'サッカー、ブログ、プログラミング好き'},
+        { content: 'プログラミングとブログ好き'},
+        { content: 'サッカーとミスチル狂'},
         { content: '奥さん大好き'},
         { content: '幼少期ドイツ在住（5年間）'},
         { content: 'マイペースで平和主義'},
+        { content: '末っ子×ゆとり'},
         { content: '英語しゃべれる。TOEIC890'},
-        { content: 'かわさき生まれ'},
+        { content: '基本情報技術者'},
       ],
     }),
   }
