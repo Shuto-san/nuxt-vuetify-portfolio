@@ -6,9 +6,9 @@
                 width="100vw"
                 >
                 <v-card-title
-                class="justify-center"
+                class="justify-center display-1 font-italic"
                 >
-                    - Work -
+                    Work
                 </v-card-title>
                 <v-row
                 >
