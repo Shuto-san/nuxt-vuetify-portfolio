@@ -4,14 +4,15 @@
         fluid>
             <v-card
             width="100vw"
+            class="pa-4"
             >
             <v-card-title
-            class="justify-center"
+            class="justify-center display-1 font-italic"
             >
-                - History -
+                History
             </v-card-title>
 
-              <v-timeline>
+              <v-timeline style="margin: 0 auto; max-width: 900px">
                 <v-timeline-item
                   v-for="(year, i) in years"
                   :key="i"
@@ -25,9 +26,8 @@
                     ></span>
                   </template>
                   <div class="py-4">
-                    <h2 :class="`title font-weight-light mb-4 ${year.color}--text`">{{ year.title }}</h2>
-                    <div>
-                        {{ year.content }}
+                    <h2 :class="`title font-italic mb-4 ${year.color}--text`">{{ year.title }}</h2>
+                    <div v-html="year.content">
                     </div>
                   </div>
                 </v-timeline-item>
@@ -43,33 +43,33 @@
       years: [
         {
           color: 'cyan',
-          year: '2011-15',
+          year: '2011~15',
           title: '東北大学',
-          content: '体育会サッカー部ガチ勢。引くほどストイックだったらしい'
+          content: '体育会サッカー部にストイックに打ち込む'
         },
         {
           color: 'green',
-          year: '2015-16',
+          year: '2015~16',
           title: 'ドイツ留学',
-          content: 'サッカーとヨーロッパ旅行のために1年間留学（は冗談で、普通の交換留学）'
+          content: 'サッカーとヨーロッパ旅行のために1年間交換留学'
         },
         {
           color: 'pink',
-          year: '2015-18',
+          year: '2015~18',
           title: '東北大学院電気系',
-          content: 'プラズマを研究。学術論文英語で2本執筆。台湾の国際学会で放電シミュレーション研究発表'
+          content: 'プラズマを研究、学術論文英語で2本執筆<br>台湾の国際学会で放電シミュレーション研究発表'
         },
         {
           color: 'amber',
-          year: '2018-19',
+          year: '2018~19',
           title: 'フロントSE',
-          content: '某大手SIerで業務システム保守＆開発。楽天ハッカソン参加でWeb業界に魅了され1年で転職'
+          content: '某大手SIerで業務システム保守＆開発<br>楽天ハッカソン参加でWeb業界に魅了され1年で転職'
         },
         {
           color: 'orange',
-          year: '2019-',
+          year: '2019~',
           title: 'Webエンジニア',
-          content: '某メガベンチャーでWebアプリ開発（主にLaravel, Vue）。仕事ツラいけどプログラミングは楽しい'
+          content: '某メガベンチャーでWebアプリ開発(Laravel,Vue,Java)<br>仕事ツラいけどプログラミング楽しい'
         },
       ],
     }),

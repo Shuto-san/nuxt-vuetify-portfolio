@@ -6,21 +6,27 @@
                 width="100vw"
                 >
                 <v-card-title
-                class="justify-center"
+                class="justify-center display-1 font-italic"
                 >
-                    - Work -
+                    Work
                 </v-card-title>
                 <v-row
                 >
                     <v-col
-                      v-for="card in cards"
-                      :key="card.title"
+                      v-for="(card,index) in cards"
+                      :key="index"
                       :cols="card.flex.cols"
                       :sm="card.flex.sm"
                       :md="card.flex.md"
+                      class="pa-10"
                     >
                     <a :href="card.redirect_url">
-                        <v-card>
+                      <v-hover
+                        v-slot:default="{ hover }"
+                      >
+                        <v-card
+                        :elevation="hover ? 16 : 2"
+                        >
                           <v-img
                             :src="card.src"
                             class="white--text align-end"
@@ -31,6 +37,7 @@
                             <v-card-text v-text="card.skill"></v-card-text>
                           </v-img>
                         </v-card>
+                      </v-hover>
                     </a>
                     </v-col>
                 </v-row>
